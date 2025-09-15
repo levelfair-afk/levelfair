@@ -1,86 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level Fair - Consultoria Empresarial</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        main {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .hero {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .service-card {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LevelFair – Compliance & Responsible Gambling</title>
+  <meta name="description" content="Solução plug & play para SIGAP e Jogo Responsável no Brasil." />
+
+  <!-- SEO & Social -->
+  <meta property="og:title" content="LevelFair – Compliance & Responsible Gambling" />
+  <meta property="og:description" content="Solução plug & play para SIGAP e Jogo Responsável no Brasil." />
+  <meta property="og:url" content="https://www.levelfair.com.br/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Level Fair</h1>
-        <p>Consultoria Empresarial</p>
-    </header>
+  <!-- Header / Menu -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="/">LevelFair</a></div>
+      <ul class="menu">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Quem Somos</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="hero">
-            <h2>Bem-vindo à Level Fair</h2>
-            <p>Transformamos desafios empresariais em oportunidades de crescimento.</p>
-        </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Compliance & Jogo Responsável para o mercado brasileiro</h1>
+    <p>Solução plug & play para SIGAP e regulamentação — simples, segura e pronta para escalar.</p>
+    <a href="#contato" class="cta-btn">Fale Conosco</a>
+  </section>
 
-        <section class="services">
-            <div class="service-card">
-                <h3>Consultoria Estratégica</h3>
-                <p>Desenvolvemos estratégias personalizadas para o crescimento do seu negócio.</p>
-            </div>
-            <div class="service-card">
-                <h3>Gestão de Projetos</h3>
-                <p>Implementamos metodologias eficientes para execução de projetos.</p>
-            </div>
-            <div class="service-card">
-                <h3>Análise de Mercado</h3>
-                <p>Identificamos oportunidades e riscos no seu mercado de atuação.</p>
-            </div>
-        </section>
-    </main>
+  <!-- Serviços -->
+  <section id="servicos" class="section">
+    <h2>Serviços</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Monitoramento SIGAP</h3>
+        <p>Conformidade automatizada com a regulamentação brasileira de apostas.</p>
+      </div>
+      <div class="card">
+        <h3>Jogo Responsável</h3>
+        <p>Ferramentas para autoexclusão, limites de apostas e relatórios de uso responsável.</p>
+      </div>
+      <div class="card">
+        <h3>Integração Open Finance</h3>
+        <p>APIs para verificação de renda, KYC e análise de risco em tempo real.</p>
+      </div>
+      <div class="card">
+        <h3>Dashboard Analítico</h3>
+        <p>Métricas de engajamento, risco e compliance em uma interface intuitiva.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Level Fair. Todos os direitos reservados.</p>
-        <p>www.levelfair.com.br</p>
-    </footer>
+  <!-- Quem Somos -->
+  <section id="sobre" class="section alt-bg">
+    <h2>Quem Somos</h2>
+    <p>A LevelFair nasceu para simplificar a vida de operadores e reguladores de apostas no Brasil.
+       Nossa missão é tornar o mercado mais seguro, transparente e sustentável.</p>
+    <p><strong>Equipe:</strong> especialistas em dados, compliance, tecnologia e open finance.</p>
+  </section>
+
+  <!-- Cases / Prova Social -->
+  <section id="cases" class="section">
+    <h2>Cases de Sucesso</h2>
+    <div class="grid">
+      <div class="case">
+        <h3>Operadora A</h3>
+        <p>Redução de 25% no risco de não conformidade no 1º trimestre após implementação.</p>
+      </div>
+      <div class="case">
+        <h3>Operadora B</h3>
+        <p>Engajamento de jogo responsável 40% acima da média de mercado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section alt-bg">
+    <h2>Contato</h2>
+    <form id="contact">
+      <input name="name" placeholder="Nome" required />
+      <input name="email" placeholder="Email" type="email" required />
+      <textarea name="message" placeholder="Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p class="note">Responderemos em até 24h.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 LevelFair. Todos os direitos reservados. |
+       <a href="/privacidade">Política de Privacidade</a> |
+       <a href="/termos">Termos de Uso</a>
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
