@@ -1,0 +1,20 @@
+{
+  "routes": [
+    { "route": "/old", "redirect": "/new", "statusCode": 301 },
+    { "route": "/sitemap.xml", "rewrite": "/sitemap.xml" },
+    { "route": "/robots.txt", "rewrite": "/robots.txt" }
+  ],
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": ["/api/*", "/assets/*", "/*.css", "/*.js", "/*.png", "/*.jpg", "/*.svg"]
+  },
+  "globalHeaders": {
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "geolocation=(), microphone=(), camera=()"
+  },
+  "mimeTypes": {
+    ".json": "application/json; charset=UTF-8"
+  }
+}
