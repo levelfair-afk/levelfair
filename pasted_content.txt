@@ -1,0 +1,155 @@
+strutura de Navegação do Site (Menus)
+
+Menu principal (topo):
+
+Início – Hero Section + CTA
+
+Soluções – Descrição modular (SIGAP, Responsible Gambling, App B2C, Insights)
+
+Quem Somos – Missão, visão, valores, equipe
+
+Clientes & Cases – Resultados e histórias de sucesso
+
+Blog / Insights – Artigos sobre compliance, RG, tendências do setor
+
+Contato – Formulário e dados de contato
+
+Rodapé:
+
+Links rápidos para Termos de Uso, Política de Privacidade, LGPD
+
+Redes sociais e LinkedIn corporativo
+
+Link para documentação técnica (para operadoras)
+
+🖼️ Mockup Conceitual de Conteúdo
+1) Hero Section (Início)
+
+Headline:
+“Compliance & Jogo Responsável – Simples, Plug & Play”
+
+Subheadline:
+“A plataforma que conecta operadoras, reguladores e apostadores para um mercado mais seguro, eficiente e transparente.”
+
+CTA:
+[Agendar Demonstração] [Saiba Mais]
+
+Imagem sugerida: ilustração de dashboard + pessoas interagindo de forma positiva.
+
+2) Soluções (Seção Principal)
+
+Organize em cards ou blocos modulares:
+
+Módulo SIGAP
+
+“Automatize seus reportes diários e mensais para o SIGAP, reduza risco regulatório e ganhe dashboards de conciliação e evidências em 1 clique.”
+
+Pontos-chave:
+
+Geração e envio automático dos 6 arquivos obrigatórios.
+
+Logs imutáveis e protocolos prontos para auditoria.
+
+Painel de SLA com status em tempo real.
+
+Módulo Responsible Gambling
+
+“Cumprimento imediato da Portaria SPA/MF nº 1.231/2024 – e além: IA comportamental, gamificação e mensagens empáticas para proteção do jogador.”
+
+Pontos-chave:
+
+Limites, autoexclusão, reality checks (compliance-ready).
+
+IA para detectar comportamento de risco.
+
+UI/UX white-label para sites e apps de operadoras.
+
+App Level (B2C)
+
+“Ferramenta de autoconsciência para 17,7M de apostadores no Brasil.”
+
+Pontos-chave:
+
+Quiz motivacional e perfis de jogador.
+
+IA Coach com dicas personalizadas.
+
+Dashboard pessoal de apostas, ganhos e perdas.
+
+Level Insights (DaaS)
+
+“Transforme dados anonimizados em inteligência de mercado.”
+
+Pontos-chave:
+
+Relatórios trimestrais de comportamento do jogador.
+
+Dashboards executivos para compliance e estratégia.
+
+APIs de dados para integrações customizadas.
+
+3) Quem Somos
+
+Missão:
+“Tornar o mercado de apostas brasileiro mais seguro, transparente e sustentável.”
+
+Visão:
+“Ser o padrão de referência em Responsible Gambling e SIGAP no Brasil e na América Latina.”
+
+Valores:
+Compliance by design • Proteção do jogador • Transparência • Inovação • Eficiência
+
+Adicionar foto ou ilustração da equipe ou mapa LATAM.
+
+4) Clientes & Cases
+
+Bloco em formato de cards ou carrossel, com resultados quantitativos:
+
+Operadora A:
+“Redução de 25% no retrabalho de reportes SIGAP no 1º trimestre.”
+
+Operadora B:
+“Engajamento de Jogo Responsável 40% acima da média do mercado.”
+
+Espaço para logos de clientes/parceiros e depoimentos.
+
+5) Blog / Insights
+
+Área para artigos sobre:
+
+Novas portarias da SPA/MF.
+
+Tendências de Responsible Gambling.
+
+Boas práticas de compliance e tecnologia.
+
+6) Contato
+
+Formulário simples (nome, email, mensagem).
+Incluir:
+
+Endereço (ou apenas “Operamos 100% remoto, com sede em São Paulo”)
+
+Botão CTA: “Solicitar Demonstração”
+
+7) Rodapé
+
+Links: Privacidade | Termos | LGPD | Documentação técnica
+
+Logo + copyright
+
+Botões de redes sociais
+
+Mini CTA: “Quer se juntar ao time? Veja vagas abertas.”
+
+🎨 Sugestão Visual (Mockup)
+
+Paleta: azul e roxo institucional (transmite tecnologia e confiança) + branco para clareza.
+
+Layout: seções bem separadas por faixas (alternando fundo branco e cinza claro).
+
+Ícones: para cada módulo/benefício (SIGAP, RG, Insights).
+
+CTA fixo: botão “Agendar Demo” no header (sempre visível).
+
+Responsividade: mobile-first, texto curto, botões bem grandes.
