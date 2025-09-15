@@ -6,10 +6,30 @@ document.addEventListener('DOMContentLoaded', function() {
         header.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // --- Smooth Scrolling for All Internal Links ---
+    // --- Mobile Navigation Toggle ---
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    const body = document.body;
+
+    function toggleMobileMenu() {
+        navMenu.classList.toggle('active');
+        body.classList.toggle('nav-open');
+    }
+
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    }
+    
+    // --- Smooth Scrolling & Menu Closing ---
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
+
+            // If mobile menu is open, close it
+            if (body.classList.contains('nav-open')) {
+                toggleMobileMenu();
+            }
+
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 const offset = 80; // Header height offset
@@ -62,11 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
 
     animatedElements.forEach(el => observer.observe(el));
-
-    // --- Mobile Navigation (placeholder for future implementation) ---
-    // The current design for desktop is prioritized. For a full mobile menu,
-    // additional HTML for the toggle button and refined CSS would be needed.
-    // This script structure is ready for that when required.
     
     // --- Parallax on Hero Section ---
     window.addEventListener('scroll', () => {
