@@ -3,46 +3,29 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Header Style on Scroll ---
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        header.classList.toggle('scrolled', window.scrollY > 50);
     });
 
     // --- Smooth Scrolling for All Internal Links ---
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    internalLinks.forEach(link => {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
-                // Close mobile menu if open
-                if (navUl.classList.contains('active')) {
-                    toggleMobileMenu();
-                }
-                smoothScrollTo(targetSection);
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offset = 80; // Header height offset
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
         });
     });
 
-    function smoothScrollTo(element) {
-        const headerHeight = 80; // Approximate header height
-        const targetPosition = element.offsetTop - headerHeight;
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    }
-
-    // --- Enhanced Form Submission Handling ---
+    // --- Form Submission Handling ---
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             if (validateForm()) {
-                alert('Obrigado pelo seu interesse! Entraremos em contato em breve.');
+                alert('Obrigado! Sua demonstração foi solicitada com sucesso.');
                 this.reset();
             }
         });
@@ -50,34 +33,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function validateForm() {
         let isValid = true;
-        clearErrors();
+        const errorSpan = contactForm.querySelector('.error-message');
+        errorSpan.textContent = ''; // Clear previous errors
+
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+
+        if (!name.value.trim() || !email.value.trim()) {
+            errorSpan.textContent = 'Por favor, preencha todos os campos.';
+            isValid = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+            errorSpan.textContent = 'Por favor, insira um email válido.';
+            isValid = false;
+        }
         
-        const nameField = { id: 'name', message: 'Por favor, preencha seu nome.' };
-        const emailField = { id: 'email', message: 'Por favor, insira um email válido.', validator: isValidEmail };
-        
-        [nameField, emailField].forEach(fieldInfo => {
-            const input = document.getElementById(fieldInfo.id);
-            if (!input.value.trim() || (fieldInfo.validator && !fieldInfo.validator(input.value))) {
-                showError(input, fieldInfo.message);
-                isValid = false;
-            }
-        });
         return isValid;
-    }
-
-    function showError(input, message) {
-        const errorElement = input.nextElementSibling;
-        errorElement.textContent = message;
-        input.style.borderColor = 'var(--c-error)';
-    }
-
-    function clearErrors() {
-        document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-        document.querySelectorAll('#contact-form input').forEach(el => el.style.borderColor = '');
-    }
-
-    function isValidEmail(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
     // --- Intersection Observer for Animations ---
@@ -93,18 +63,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     animatedElements.forEach(el => observer.observe(el));
 
-    // --- Mobile Navigation ---
-    const navUl = document.querySelector('nav ul');
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const body = document.body;
+    // --- Mobile Navigation (placeholder for future implementation) ---
+    // The current design for desktop is prioritized. For a full mobile menu,
+    // additional HTML for the toggle button and refined CSS would be needed.
+    // This script structure is ready for that when required.
+    
+    // --- Parallax on Hero Section ---
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const aurora = document.querySelector('.aurora-background');
+        if (aurora) {
+            aurora.style.transform = `translate(-50%, -50%) translateY(${scrolled * 0.3}px) rotate(${scrolled * 0.1}deg)`;
+        }
+    });
 
-    function toggleMobileMenu() {
-        const isActive = navUl.classList.toggle('active');
-        mobileMenuToggle.innerHTML = isActive ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        body.style.overflow = isActive ? 'hidden' : '';
-    }
-
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-    }
 });
