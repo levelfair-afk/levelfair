@@ -1,47 +1,107 @@
-name: Azure Static Web Apps CI/CD
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LevelFair – Compliance & Responsible Gambling</title>
+  <meta name="description" content="Solução plug & play para SIGAP e Jogo Responsável no Brasil." />
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
+  <!-- SEO & Social -->
+  <meta property="og:title" content="LevelFair – Compliance & Responsible Gambling" />
+  <meta property="og:description" content="Solução plug & play para SIGAP e Jogo Responsável no Brasil." />
+  <meta property="og:url" content="https://www.levelfair.com.br/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-jobs:
-  build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
-    runs-on: ubuntu-latest
-    name: Build and Deploy Job
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true
-          lfs: false
-      - name: Build And Deploy
-        id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_WATER_03249700F }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
-          action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "/" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Menu -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="/">LevelFair</a></div>
+      <ul class="menu">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Quem Somos</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_WATER_03249700F }}
-          action: "close"
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Compliance & Jogo Responsável para o mercado brasileiro</h1>
+    <p>Solução plug & play para SIGAP e regulamentação — simples, segura e pronta para escalar.</p>
+    <a href="#contato" class="cta-btn">Fale Conosco</a>
+  </section>
 
+  <!-- Serviços -->
+  <section id="servicos" class="section">
+    <h2>Serviços</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Monitoramento SIGAP</h3>
+        <p>Conformidade automatizada com a regulamentação brasileira de apostas.</p>
+      </div>
+      <div class="card">
+        <h3>Jogo Responsável</h3>
+        <p>Ferramentas para autoexclusão, limites de apostas e relatórios de uso responsável.</p>
+      </div>
+      <div class="card">
+        <h3>Integração Open Finance</h3>
+        <p>APIs para verificação de renda, KYC e análise de risco em tempo real.</p>
+      </div>
+      <div class="card">
+        <h3>Dashboard Analítico</h3>
+        <p>Métricas de engajamento, risco e compliance em uma interface intuitiva.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quem Somos -->
+  <section id="sobre" class="section alt-bg">
+    <h2>Quem Somos</h2>
+    <p>A LevelFair nasceu para simplificar a vida de operadores e reguladores de apostas no Brasil.
+       Nossa missão é tornar o mercado mais seguro, transparente e sustentável.</p>
+    <p><strong>Equipe:</strong> especialistas em dados, compliance, tecnologia e open finance.</p>
+  </section>
+
+  <!-- Cases / Prova Social -->
+  <section id="cases" class="section">
+    <h2>Cases de Sucesso</h2>
+    <div class="grid">
+      <div class="case">
+        <h3>Operadora A</h3>
+        <p>Redução de 25% no risco de não conformidade no 1º trimestre após implementação.</p>
+      </div>
+      <div class="case">
+        <h3>Operadora B</h3>
+        <p>Engajamento de jogo responsável 40% acima da média de mercado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section alt-bg">
+    <h2>Contato</h2>
+    <form id="contact">
+      <input name="name" placeholder="Nome" required />
+      <input name="email" placeholder="Email" type="email" required />
+      <textarea name="message" placeholder="Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p class="note">Responderemos em até 24h.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 LevelFair. Todos os direitos reservados. |
+       <a href="/privacidade">Política de Privacidade</a> |
+       <a href="/termos">Termos de Uso</a>
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
