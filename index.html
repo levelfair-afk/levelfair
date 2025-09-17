@@ -9,8 +9,8 @@
 <link href="styles.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
-<body class="theme-light">
-<div class="utility-controls"><button aria-label="Alternar idioma" id="toggle-lang"><i class="ri-translate-2"></i></button></div><div class="min-h-screen bg-white">
+<body>
+<div class="min-h-screen bg-white">
 <!-- Header -->
 <header class="header">
 <div class="container">
@@ -20,11 +20,11 @@
 <a class="menu-link" data-target="hero" href="#hero"><img alt="LevelFair Logo" class="logo" src="logo-levelfair.png" width="120"/></a>
 </div>
 <nav class="nav-desktop">
-<a class="nav-link menu-link" data-target="services" href="#services">Serviços</a>
-<a class="nav-link menu-link" data-target="features" href="#features">Recursos</a>
-<a class="nav-link menu-link" data-target="api-sdk" href="#api-sdk">API</a>
-<a class="nav-link menu-link" data-target="about" href="#about">Sobre</a>
-<a class="nav-link menu-link" data-target="contact" href="#contact">Contato</a>
+<a class="menu-link nav-link" data-target="services" href="#services">Serviços</a>
+<a class="menu-link nav-link" data-target="features" href="#features">Recursos</a>
+<a class="menu-link nav-link" data-target="api-sdk" href="#api-sdk">API</a>
+<a class="menu-link nav-link" data-target="about" href="#about">Sobre</a>
+<a class="menu-link nav-link" data-target="contact" href="#contact">Contato</a>
 <button class="btn-primary">Solicitar Demo</button>
 </nav>
 <button class="mobile-menu-btn">
@@ -35,10 +35,10 @@
 </header>
 <!-- Hero Section -->
 <!-- <section class="hero"> -->
-<section class="hero full-page-section section-block" id="hero">
-<div class="hero-bg" style="animation: bg-gradient-flow 15s ease infinite;"></div>
+<section class="hero full-page-section" id="hero">
+<div class="hero-bg"></div>
 <div class="container">
-<div class="hero-content hero-align-left">
+<div class="hero-content">
 <h1 class="hero-title">
                         Soluções Completas de <span class="text-highlight">Compliance</span> para Apostas Esportivas
                     </h1>
@@ -54,7 +54,7 @@
 </section>
 <!-- Services Section -->
 <!--<section id="services" class="services"> -->
-<section class="services full-page-section section-block" id="services">
+<section class="services full-page-section" id="services">
 <div class="container">
 <div class="section-header">
 <h2 class="section-title">Nossos Serviços</h2>
@@ -111,7 +111,7 @@
 </div>
 </div>
 </section>
-<section class="features section-block" id="features">
+<section class="features" id="features">
 <div class="container">
 <div class="section-header">
 <h2 class="section-title">Recursos Avançados</h2>
@@ -128,12 +128,12 @@
                     </p>
 </div>
 <div class="feature-image">
-<img alt="Gráficos e dados de conformidade" src="image1.jpg"/>
+<img alt="Gráficos e dados de conformidade" loading="lazy" src="image1.jpg"/>
 </div>
 </div>
 <div class="feature-item-advanced">
 <div class="feature-image">
-<img alt="Dashboard com relatórios automatizados" src="image2.jpg"/>
+<img alt="Dashboard com relatórios automatizados" loading="lazy" src="image2.jpg"/>
 </div>
 <div class="feature-content-advanced">
 <h3 class="feature-title-advanced">Relatórios Automatizados</h3>
@@ -150,12 +150,12 @@
                     </p>
 </div>
 <div class="feature-image">
-<img alt="Escudo de segurança digital" src="image3.jpg"/>
+<img alt="Escudo de segurança digital" loading="lazy" src="image3.jpg"/>
 </div>
 </div>
 <div class="feature-item-advanced">
 <div class="feature-image">
-<img alt="Sala de monitoramento com múltiplas telas" src="image4.jpg"/>
+<img alt="Sala de monitoramento com múltiplas telas" loading="lazy" src="image4.jpg"/>
 </div>
 <div class="feature-content-advanced">
 <h3 class="feature-title-advanced">Monitoramento 24/7</h3>
@@ -169,8 +169,8 @@
 </section>
 <!-- Features Section -->
 <!-- <section id="api-sdk" class="api-section"> -->
-<section class="api-section full-page-section section-block" id="api-sdk">
-<section class="features full-page-section section-block" id="features">
+<section class="api-section full-page-section" id="api-sdk">
+<section class="features full-page-section" id="features">
 <div class="container">
 <div class="api-content">
 <div class="api-text">
@@ -200,13 +200,13 @@
   <span class="key">odds</span>: <span class="number">1.85</span>
 });</code></pre>
 </div>
-<div class="mockup-user-image aos-animate" data-aos="fade-up"><img alt="Mockup da tela do usuário" src="mockup-user.jpg"/></div></div>
+<div class="api-mockup"><img alt="Mockup da interface do usuário" loading="lazy" src="mockup-user.jpg"/></div></div>
 </div>
 </div>
 </section>
 <!-- About Section -->
 <!--<section id="about" class="about"> -->
-<section class="about full-page-section section-block" id="about">
+<section class="about full-page-section" id="about">
 <div class="container">
 <div class="about-grid">
 <div class="about-content">
@@ -242,7 +242,7 @@
 </div></div></section>
 <!-- Contact Section -->
 <!-- <section id="contact" class="contact"> -->
-<section class="contact full-page-section section-block" id="contact">
+<section class="contact full-page-section" id="contact">
 <div class="container">
 <div class="section-header">
 <h2 class="section-title">Entre em Contato</h2>
@@ -319,7 +319,7 @@
 <textarea maxlength="500" name="message" placeholder="Conte-nos sobre suas necessidades de compliance..." required=""></textarea>
 <div class="char-counter">
 <span id="char-count">0</span>/500
-    </div>
+                                </div>
 </div>
 <button class="btn-form-submit" type="submit">Enviar Mensagem</button>
 </form>
@@ -333,7 +333,8 @@
 <div class="footer-grid">
 <div class="footer-brand">
 <div class="footer-logo">
-<img alt="LevelFair" class="footer-logo-img" src="logo.png"/>
+<img alt="LevelFair" class="footer-logo-img" loading="lazy" src="logo.png"/>
+<h3 class="footer-logo-text">LevelFair</h3>
 </div>
 <p class="footer-description">
                             Soluções especializadas em compliance para o mercado de apostas esportivas brasileiro.
